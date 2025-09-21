@@ -1,0 +1,281 @@
+/* Importar una fuente de Google Fonts para un aspecto más moderno */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap');
+
+/* Variables CSS para una gestión de colores más fácil */
+:root {
+    --color-fondo: #2c3e50; /* Azul oscuro del logo */
+    --color-acento: #b33939; /* Rojo ladrillo del logo */
+    --color-resalte: #d3a34a; /* Dorado/Beige arenoso del logo */
+    --color-texto-claro: #f0f0f0; /* Blanco roto para texto sobre fondo oscuro */
+    --color-texto-oscuro: #333333; /* Gris oscuro para texto sobre fondo claro */
+    --color-borde: #555; /* Gris para bordes sutiles */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo); /* Fondo general con el azul oscuro del logo */
+    color: var(--color-texto-claro); /* Color de texto predeterminado claro */
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces internos */
+}
+
+/* Contenedor principal para centrar el contenido */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #3b506b; /* Un tono un poco más claro que el fondo para las secciones */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+header {
+    text-align: center;
+    padding: 30px 0 20px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-claro);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+header img {
+    max-width: 120px; /* Logo más pequeño */
+    height: auto;
+    display: block; /* Para centrar la imagen */
+    margin: 0 auto 15px; /* Espacio debajo del logo */
+    border: 3px solid var(--color-resalte); /* Borde dorado alrededor del logo */
+    border-radius: 50%; /* Si quieres que el borde sea circular */
+    box-shadow: 0 0 15px rgba(var(--color-resalte), 0.5); /* Sombra para resaltar */
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif; /* Fuente impactante para el título */
+    font-size: 2.8em;
+    color: var(--color-resalte); /* Título con el color dorado */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Más espacio entre los botones */
+    padding: 15px 0;
+    background-color: var(--color-acento); /* Barra de navegación con el color rojo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    font-weight: 700; /* Negrita */
+    font-size: 1.1em;
+    padding: 10px 25px;
+    border-radius: 30px; /* Botones más redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo sutil para los botones */
+}
+
+nav a:hover {
+    background-color: var(--color-resalte); /* Fondo dorado al pasar el ratón */
+    color: var(--color-fondo); /* Texto oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Pequeño efecto de elevación */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de las secciones */
+section {
+    margin-bottom: 60px; /* Más espacio entre secciones */
+    padding: 30px;
+    background-color: #4a6381; /* Un tono diferente para las secciones para que destaquen del fondo general del main */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--color-acento); /* Borde lateral rojo para destacar */
+}
+
+section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    color: var(--color-resalte); /* Títulos de sección en dorado */
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(var(--color-resalte), 0.5);
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section h3 {
+    color: var(--color-acento); /* Subtítulos en rojo */
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: var(--color-texto-claro);
+}
+
+/* Estilo para las imágenes dentro de las clases */
+.clase img {
+    max-width: 100%;
+    height: 250px; /* Altura fija para consistencia */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--color-acento); /* Borde rojo para las imágenes de clase */
+}
+
+.clase {
+    background-color: #5d7494; /* Un fondo ligeramente diferente para cada tarjeta de clase */
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.clase:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Blockquote para la frase motivadora */
+blockquote {
+    background-color: var(--color-acento); /* Fondo rojo para la cita */
+    color: var(--color-texto-claro);
+    padding: 25px;
+    margin: 40px auto;
+    border-left: 8px solid var(--color-resalte); /* Borde dorado */
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablas de horarios */
+table {
+    width: 100%;
+    border-collapse: separate; /* Para que border-radius funcione en celdas */
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: #5d7494; /* Fondo de tabla */
+    border-radius: 8px;
+    overflow: hidden; /* Para que los bordes redondeados se apliquen bien */
+}
+
+th, td {
+    border: 1px solid var(--color-borde);
+    padding: 12px 15px;
+    text-align: left;
+    color: var(--color-texto-claro);
+}
+
+th {
+    background-color: var(--color-acento); /* Encabezados de tabla en rojo */
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #506a88; /* Rayas para mejor lectura */
+}
+
+/* Listas (cotización y contacto) */
+ul {
+    list-style: none; /* Sin viñetas predeterminadas */
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    background-color: #5d7494; /* Fondo para cada item de lista */
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border-left: 5px solid var(--color-resalte); /* Borde dorado para items */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    color: var(--color-texto-claro);
+}
+
+ul li strong {
+    color: var(--color-acento); /* Nombres de planes en rojo */
+}
+
+ul li a {
+    color: var(--color-resalte); /* Enlaces de contacto en dorado */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: var(--color-texto-claro); /* Cambia a blanco al pasar el ratón */
+    text-decoration: underline;
+}
+
+/* Responsive design básico */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    blockquote {
+        font-size: 1.2em;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        max-width: 90px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    p, ul li {
+        font-size: 1em;
+    }
+}
